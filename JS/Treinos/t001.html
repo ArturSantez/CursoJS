@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treino 1</title>
+    <title>Cadastro</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        window.alert(`Bem vindo, ${nome}! Por favor preencha as informações de cadastro para continuar`)
+        var ano = Number.parseInt(window.prompt('Digite seu ano de nascimento'))
+        idade = 2025 - ano 
+        var estado = window.prompt('Em qual estado você nasceu?')
+        var renda = Number(window.prompt('Digite sua renda mensal'))
+        document.write(`<h1>INFORMAÇÕES DE CADASTRO: ${nome.toUpperCase()}</h1>`)
+        document.write(`<strong>Idade:</strong> ${idade} <br>`)
+        document.write(`<strong>Unidade federativa:</strong> ${estado.toUpperCase()} <br>`)
+        document.write(`<strong>Renda mensal:</strong> ${renda.toLocaleString('pt-BR', {style: "currency", currency:'BRL'})}`)
+    </script>
 </body>
 </html>
