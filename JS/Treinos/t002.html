@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Loja</h1>
+    <script>
+        var produto = window.prompt('Qual produto deseja comprar?')
+        var valor = Number(window.prompt('Digite o valor do produto'))
+        var quantidade = Number.parseInt( window.prompt(`Quantas unidade deseja comprar do produto: ${produto}?`))
+        var total = valor * quantidade
+        window.confirm('Deseja finalizar a comprar?')
+        document.write(`<strong>Valor total da compra:</strong> ${total}`)
+    </script>
+</body>
+</html>
