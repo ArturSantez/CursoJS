@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro número:'))
+
+        var soma = n1 + n2 
+        var multi = n1 * n2
+
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)
+        document.write(`A multiplicação entre ${n1} e ${n2} é igual a ${multi}`)
+    </script>
+</body>
+</html>

@@ -20,9 +20,11 @@
         var produto = window.prompt('Qual produto deseja comprar?')
         var valor = Number(window.prompt('Digite o valor do produto'))
         var quantidade = Number.parseInt( window.prompt(`Quantas unidade deseja comprar do produto: ${produto}?`))
+
         var total = valor * quantidade
+
         window.confirm('Deseja finalizar a comprar?')
-        document.write(`<strong>Valor total da compra:</strong> ${total}`)
+        document.write(`<strong>Valor total da compra:</strong> ${total.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})}`)
     </script>
 </body>
 </html>
