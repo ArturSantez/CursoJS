@@ -15,6 +15,13 @@
     </style>
 </head>
 <body>
-    
+    <script>
+        var conta = Number(window.prompt('Digite o valor total da conta'))
+        var quant = Number.parseInt(window.prompt('Digite o número de pessoas para dividir a conta'))
+        
+        var valor = conta / quant
+
+        document.write(`<strong>Valor por pessoa:</strong> ${valor.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+    </script>
 </body>
 </html>
