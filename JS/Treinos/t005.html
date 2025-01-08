@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples 2</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        strong.erro {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro número'))
+        
+        var soma = n1 + n2
+        var mult = n1 * n2
+        var div = n2 != 0 ? (n1 / n2) : '<strong class="erro">Error (divisão por zero)</strong>'
+        var res = n2 != 0 ? (n1 % n2) : '<strong class="erro">Error (divisão por zero)</strong>'
+
+        document.write(`<p>A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong></p>`)
+        document.write(`<p>A multiplicação entre ${n1} e ${n2} é igual a <strong>${mult}</strong></p>`)
+        document.write(`<p>${n1} dividido por ${n2} é igual a <strong>${div}</strong></p>`)
+        document.write(`<p>O resto da divisão a cima é igual a <strong>${res}</strong></p>`)
+    </script>
+</body>
+</html>
