@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Números</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro número'))
+
+        var maior = n1 > n2 ? 'Sim' : 'Não'
+        var menor = n1 < n2 ? 'Sim' : 'Não'
+        var igual = n1 === n2 ? 'Sim' : 'Não'
+
+        document.write(`<p>${n1} é maior que ${n2}? <strong>${maior}</strong></p>`)
+        document.write(`<p>${n1} é menor que ${n2}? <strong>${menor}</strong></p>`)
+        document.write(`<p>O número ${n1} é igual a ${n2}? <strong>${igual}</strong>`)
+    </script>
+</body>
+</html>
