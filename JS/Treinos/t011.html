@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterador de Texto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            background-color: black;
+            color: #F7E025;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input:active {
+            background-color: #F7E025;
+            color: black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alterador de Textos</h1>
+    <p>Clique em um botão para mudar esse texto.</p>
+    <input type="button" value="Botão 1" id="b1">
+    <input type="button" value="Botão 2" id="b2">
+    <input type="button" value="Resetar" id="res">
+
+    <script>
+        var texto = window.document.getElementsByTagName('p')[0]
+        var botao1 = window.document.getElementById('b1')
+        var botao2 = window.document.getElementById('b2')
+        var resetar = window.document.getElementById('res')
+        
+        botao1.addEventListener('click', click1)
+        botao2.addEventListener('click', click2)
+        resetar.addEventListener('click', reset)
+
+        function click1() {
+            texto.innerText = 'Texto alterado pelo botão 1'
+        }
+        function click2() {
+            texto.innerText = 'Texto alterado pelo botão 2'
+        }
+        function reset() {
+            texto.innerText = 'Clique em um botão para mudar esse texto.'
+        }
+    </script>
+</body>
+</html>
