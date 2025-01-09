@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Média Escolar</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Média Escolar</h1>
+    <script>
+        var n1 = Number(window.prompt('Digite a primeira nota'))
+        var n2 = Number(window.prompt('Digite a segunda nota'))
+        var n3 = Number(window.prompt('Digite a terceira nota'))
+
+        var media = (n1 + n2 + n3) / 3 
+        var result = media >= 7 ? 'APROVADO' : 'REPROVADO'
+
+        document.write(`<p>Média do Aluno: <strong>${media}</strong></p>`)
+        document.write(`<p>Situação: <strong>${result}</strong></p>`)
+    </script>
+</body>
+</html>
