@@ -15,11 +15,11 @@
         h1 {
             text-align: center;
         }
-        div {
+        div#clique {
             display: flex;
             justify-content: center;
         }
-        div > input {
+        div#clique > input {
             background-color: black;
             font-size: 1.5em;
             color: #F7E025;
@@ -27,7 +27,7 @@
             padding: 20px;
             border-radius: 5px;
         }
-        div > input:active {
+        div#clique > input:active {
             background-color: #F7E025;
             color: black;
             border: 1px solid black;
@@ -36,23 +36,52 @@
             text-align: center;
             font-size: 2em;
         }
+        div#reiniciar {
+            display: flex;
+            justify-content: center;
+        }
+        div#reiniciar > input {
+            background-color: #F7E025;
+            font-size: 1.5em;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        div#reiniciar > input:hover {
+            background-color: black;
+            color: #F7E025;
+            transition: background-color .5s;
+        }
+        div#reiniciar > input:active {
+            background-color: red;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <h1>Contador de Cliques</h1>
-    <div>
+    <div id="clique">
         <input type="button" value="Clique aqui" id="b">
     </div>
     <p>0</p>
+    <div id="reiniciar">
+        <input type="button" value="Reiniciar" id="rei">
+    </div>
     <script>
         var botao = window.document.getElementById('b')
         var contador = window.document.getElementsByTagName('p')[0]
+        var reiniciar = window.document.getElementById('rei')
         var num = 0
 
         botao.addEventListener('click', clicou)
+        reiniciar.addEventListener('click', reiniciou)
 
         function clicou() {
             ++num 
+            contador.innerText = `${num}`
+        }
+        function reiniciou() {
+            num = 0
             contador.innerText = `${num}`
         }
     </script>
