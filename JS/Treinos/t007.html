@@ -22,10 +22,24 @@
         var quantidade = Number.parseInt( window.prompt(`Quantas unidade deseja comprar do produto: ${produto}?`))
         var resp = window.prompt('Você possui um cupom de desconto? [SIM OU NÃO]')
 
-        var desc = resp === 'SIM' ? valor * quantidade * (20/100) : valor * quantidade
+        if (resp == 'SIM') {
+            var desc = (valor * quantidade) * (20 / 100)
 
-        window.confirm('Deseja finalizar a comprar?')
-        document.write(`<strong>Valor total da compra:</strong> ${total.toLocaleString('pt-BR', {style: "currency", currency: 'BRL'})}`)
+            var total = (valor * quantidade) - desc 
+        } else {
+           var total = valor * quantidade  
+        }
+
+        var confirm = window.confirm('Deseja finalizar a comprar?')
+
+        if (confirm) {
+            document.write(`<p><strong>Compra Finalizada!</strong></p>`)
+            document.write(`<p>Produto: ${produto}</p>`)
+            document.write(`<p>Quantidade: ${quantidade} unidade(s)`)
+            document.write(`<p>Total da comprar: ${total.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}</p>`)
+        } else {
+            document.write(`<p><strong>Compra Cancelada</strong></p>`)
+        }
     </script>
 </body>
 </html>
