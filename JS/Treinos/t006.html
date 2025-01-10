@@ -16,13 +16,13 @@
         var n1 = Number(window.prompt('Digite um número'))
         var n2 = Number(window.prompt('Digite outro número'))
 
-        var maior = n1 > n2 ? 'Sim' : 'Não'
-        var menor = n1 < n2 ? 'Sim' : 'Não'
-        var igual = n1 === n2 ? 'Sim' : 'Não'
-
-        document.write(`<p>${n1} é maior que ${n2}? <strong>${maior}</strong></p>`)
-        document.write(`<p>${n1} é menor que ${n2}? <strong>${menor}</strong></p>`)
-        document.write(`<p>O número ${n1} é igual a ${n2}? <strong>${igual}</strong>`)
+        if (n1 > n2) {
+            document.write(`${n1} é maior que ${n2}`)
+        } else if (n2 > n1) {
+            document.write(`${n2} é maior que ${n1}`)
+        } else {
+            document.write('Os números são iguais')
+        } 
     </script>
 </body>
 </html>
