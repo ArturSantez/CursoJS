@@ -7,6 +7,7 @@
     <style>
         body {
             color: white;
+            text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
         }
@@ -20,6 +21,10 @@
         var hora = agora.getHours()
         var minutos = agora.getMinutes()
         var relogio = window.document.getElementsByTagName('p')[0]
+
+        if (minutos < 10) {
+            minutos = '0' + minutos
+        }
 
         relogio.innerHTML = `Agora são exatamente ${hora}h${minutos}m` 
 
