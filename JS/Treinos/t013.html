@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+    <style>
+        body {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minutos = agora.getMinutes()
+        var relogio = window.document.getElementsByTagName('p')[0]
+
+        relogio.innerHTML = `Agora são exatamente ${hora}h${minutos}m` 
+
+        if (hora < 12) {
+            window.document.write('<p>Bom dia!</p>')
+            document.body.style.backgroundColor = 'yellow'
+            document.body.style.color = 'black'
+        } else if (hora > 11 && hora <= 17) {
+            window.document.write('<p>Boa tarde!</p>')
+            document.body.style.backgroundColor = 'orange'
+        } else {
+            window.document.write('<p>Boa Noite!</p>')
+            document.body.style.backgroundColor = 'blue'
+        }
+    </script>
+</body>
+</html>
