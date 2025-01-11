@@ -16,16 +16,50 @@
 </head>
 <body>
     <h1>Simulador de Média Escolar</h1>
+    <p>
+        <label for="in1">Primeira nota:</label>
+        <input type="number" name="n1" id="txtn1" min="0" max="10" step="0.1">
+    </p>
+    <p>
+        <label for="in2">Segunda nota:</label>
+        <input type="number" name="n2" id="txtn2" min="0" max="10" step="0.1">
+    </p>
+    <p>
+        <label for="in3">Terceira nota:</label>
+        <input type="number" name="n3" id="txtn3" min="0" max="10" step="0.1">
+    </p>
+    <p>
+        <input type="button" value="Verificar">
+    </p>
+    <p id="resultado"></p>
+    
     <script>
-        var n1 = Number(window.prompt('Digite a primeira nota'))
-        var n2 = Number(window.prompt('Digite a segunda nota'))
-        var n3 = Number(window.prompt('Digite a terceira nota'))
+        var botao = window.document.getElementsByTagName('input')[3]
 
-        var media = (n1 + n2 + n3) / 3 
-        var result = media >= 7 ? 'APROVADO' : 'REPROVADO'
+        botao.addEventListener('click', verificar)
 
-        document.write(`<p>Média do Aluno: <strong>${media}</strong></p>`)
-        document.write(`<p>Situação: <strong>${result}</strong></p>`)
+        function verificar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var tn3 = window.document.getElementById('txtn3')
+            var res = window.document.getElementById('resultado')
+
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = Number(tn3.value)
+
+            var media = (n1 + n2 + n3) / 3
+
+            res.innerHTML = `Média do aluno: ${media.toFixed(1)}`
+
+            if (media < 7 && media >=  4) {
+                res.innerHTML += '<p>Situação: RECUPERAÇÃO</p>'
+            } else if (media > 7) {
+                res.innerHTML += '<p>Situação: APROVADO</p>'
+            } else {
+                res.innerHTML += '<p>Situação: REPROVADO</p>'
+            }
+        }
     </script>
 </body>
 </html>
