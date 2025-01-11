@@ -20,11 +20,13 @@
         var n2 = Number(window.prompt('Digite outro número'))
         
         var soma = n1 + n2
+        var sub = n1 > n2 ? n1 - n2 : n2 - n1
         var mult = n1 * n2
         var div = n2 != 0 ? (n1 / n2) : '<strong class="erro">Error (divisão por zero)</strong>'
         var res = n2 != 0 ? (n1 % n2) : '<strong class="erro">Error (divisão por zero)</strong>'
 
         document.write(`<p>A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong></p>`)
+        document.write(`<p>A subtração entre ${n1} e ${n2} é igual a <strong> ${sub}</strong>`)
         document.write(`<p>A multiplicação entre ${n1} e ${n2} é igual a <strong>${mult}</strong></p>`)
         document.write(`<p>${n1} dividido por ${n2} é igual a <strong>${div}</strong></p>`)
         document.write(`<p>O resto da divisão a cima é igual a <strong>${res}</strong></p>`)
