@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="idade"></p>
+    <p id="class"></p>
+
+    <script>
+        var nas = window.prompt('Digite seu ano de nascimento')
+        var anos = window.document.getElementById('idade')
+        var classe = window.document.getElementById('class')
+        var tempo = new Date()
+        var ano = tempo.getFullYear()
+        
+        var idade = ano - nas
+
+        anos.innerHTML = `Você tem <strong>${idade} anos</strong>`
+
+        if (idade <= 12) {
+            classe.innerHTML = 'Você é uma <strong>criança</strong>'
+            window.document.body.style.backgroundColor = '#F7E025'
+        } else if (idade < 18) {
+            classe.innerHTML = 'Você é um <strong>adolescente</strong>'
+            window.document.body.style.backgroundColor = 'orange'
+        } else if (idade < 65) {
+            classe.innerHTML = 'Você é um <strong>adulto</strong>'
+            window.document.body.style.backgroundColor = 'skyblue'
+        } else {
+            classe.innerHTML = 'Você é um <strong>idoso</strong>'
+            window.document.body.style.backgroundColor = 'grey'
+        }
+    </script>
+</body>
+</html>
