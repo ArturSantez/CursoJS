@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de números</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        div {
+            margin: 10px 0px;
+        }
+        p#tipocont {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Números</h1>
+    <p>
+        <label for="in1">Insira o início:</label>
+        <input type="number" name="n1" id="in1">
+    </p>
+    <p>
+        <label for="in2">Insira o final:</label>
+        <input type="number" name="n2" id="in2">
+    </p>
+    <input type="button" value="Contar" id="b">
+    <p id="tipocont"></p>
+    <div>
+
+    </div>
+
+    <script>
+        var num1 = window.document.getElementById('in1')
+        var num2 = window.document.getElementById('in2')
+        var botao = window.document.getElementById('b')
+        var tipo = window.document.getElementById('tipocont')
+        var contador = window.document.getElementsByTagName('div')[0]
+
+        botao.addEventListener('click', clicou)
+
+        function clicou() {
+            contador.innerText = ''
+            if (Number(num1.value) < Number(num2.value)) {
+                for (var c = Number(num1.value); c <= Number(num2.value); ++c) {
+                    tipo.innerHTML = 'Contador Crescente'
+                    contador.innerHTML += c !== Number(num2.value) ? `${c}, ` : `${c}.`
+                }
+            } else {
+                for (var c = Number(num1.value); c >= Number(num2.value); --c) {
+                    tipo.innerHTML = 'Contador Decrescente'
+                    contador.innerHTML += c !== Number(num2.value) ? `${c}, ` : `${c}.`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
