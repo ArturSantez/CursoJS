@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+    <style>
+        body {
+            background-color: #F7E025;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        input#in {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Repetindo um Texto</h1>
+    <p>
+        <label for="istring">Insira uma palavra ou frase:</label>
+        <input type="text" name="string" id="istring" maxlength="10">
+    </p>
+    <p>
+        <label for="in">Insira o número de vezes que deseja repetir:</label>
+        <input type="number" name="n" id="in">
+    </p>
+    <p>
+        <input type="button" value="Repetir" id="b">
+    </p>
+    <div>
+
+    </div>
+    <script>
+        var txt = window.document.getElementById('istring')
+        var num = window.document.getElementById('in')
+        var botao = window.document.getElementById('b')
+        var rep = window.document.getElementsByTagName('div')[0]
+
+        botao.addEventListener('click', repetir)
+
+        function repetir(){
+            if (txt.value.trim() === '') {
+                alert(`Por favor, insira uma palavra ou frase.`)
+                return
+            }
+            if (num.value <= 0) {
+                alert('Insira um número maior que zero')
+                return
+            }
+            if (num.value > 100) {
+                alert('Insira um número menor ou igual a 100')
+                return
+            }
+            rep.innerText = ''
+            var c = 1
+            do {
+                rep.innerHTML += c != num.value 
+                ? `${txt.value}, ` 
+                : `${txt.value}. FIM` 
+                ++c
+            } while(c <= num.value)
+        }
+    </script>
+</body>
+</html>
