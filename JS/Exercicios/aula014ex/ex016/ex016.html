@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="inicio">Inicio:</label>
+                <input type="number" name="começo" id="inicio">
+            </p>
+            <p>
+                <label for="fim">Fim:</label>
+                <input type="number" name="final" id="fim">
+            </p>
+            <p>
+                <label for="passo">Passo</label>
+                <input type="number" name="pulo" id="passo" min="1">
+            </p>
+            <input type="button" value="Contar" id="button">
+        </div>
+        <div>
+            <p id="resultado">Preparando resultado...</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Artur Santez</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
