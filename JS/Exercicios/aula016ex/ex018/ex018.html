@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        select {
+            width: 150px;
+        }
+        input#num {
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="num">Número (entre 0 a 100)</label>
+                <input type="number" name="nume" id="num" min="1" max="100">
+                <input type="button" value="Adicionar" id="b1">
+            </p>
+        </div>
+        <div>
+            <select name="numero" id="numerose" size="8">
+            </select>
+            <p>
+                <input type="button" value="Finalizar" id="b2">
+            </p>
+        </div>
+        <div>
+            <p id="result"></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Artur Santez</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
